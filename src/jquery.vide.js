@@ -29,6 +29,7 @@
     playbackRate: 1,
     muted: true,
     loop: true,
+    playsInline: true,
     autoplay: true,
     position: '50% 50%',
     posterType: 'detect',
@@ -311,6 +312,7 @@
 
         // Set video properties
         .prop({
+          playsInline: true,
           autoplay: settings.autoplay,
           loop: settings.loop,
           volume: settings.volume,
@@ -336,8 +338,8 @@
       transform: 'translate(-' + position.x + ', -' + position.y + ')',
 
       // Disable visibility, while loading
-      visibility: 'hidden',
-      opacity: 0
+      visibility: 'visible',
+      opacity: 0.00001
     })
 
     // Resize a video, when it's loaded
